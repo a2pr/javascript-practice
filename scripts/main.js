@@ -25,17 +25,32 @@ var weaponList=[
     "slinger"
 ];
 var warriorSkillList=[
-
+    "Vertical slash",
+    "Flury",
+    "Backstab",
+    "Horizontal slash"
 ];
 
-alert(eventList[randomNumber( eventList.length - 1)]);
+var archerSkillList=[
+    "Throwing daggers",
+    "Precision shot",
+    "Triple shot"
+    
+];
+function randomWeapon(){
+        var x=weaponlist[randomNumber(weaponList.lenght -1)];
+        var y=weaponList[randomNumber(weaponList.lenght-1)];
+        var z=weaponList[randomNumber(weaponList.lenght-1)];
+        return x,y,z;
+    }
+lert(eventList[randomNumber( eventList.length - 1)]);
 var name= prompt("A crow lands on your shoulder, and start to speaks'Whats your name stranger?'");
  if(name!="") {
      alert("hi Mr or Ms"+ " " + name + " " + " You are on top of my home. So i demand you, to look for a new home for me and my children " );
      var b=prompt("Do you have any special skills? are you a Mage?, or Warrior?, or perphaps an Archer? (Mage=1, Warrior=2, Archer=3)");
     }
     if (b==1 && b!=" ") {
-        var c= prompt("Oh how lucky i'm. Can you fix my house " + " "+ classList[b -1]+"? non then what can youdo?"+" which arcane magic do you posses? perphaps"
+        var c= prompt("Oh how lucky i'm. Can you fix my house " + " "+ classList[b -1]+"? non then what can you do?"+" which arcane magic do you posses? perphaps"
          +"you can use destruction with fireballs? Or maybe you control the tempature with Ice age? or you could shake the ground itself"+ 
          "with Earth manipulation? (fireball=1, Ice age=2, Eart manipulation=3) ");
         alert("lets go to that cabin over there it could be a great place for my children");
@@ -44,6 +59,12 @@ var name= prompt("A crow lands on your shoulder, and start to speaks'Whats your 
         alert("Great im stuck with a lowly"+" "+ classList[b-1] +" "+" go grab some weapon in that cabin over there");
     }
 
+alert("You follow the crow advice and go to the cabin.");
+/*if (b>1) {
+    prompt("Inside the cabin you found a closet fill with:"+ weaponList[randomNumber(weaponList.lenght-1)]+" "+
+    weaponList[randomNumber(weaponList.lenght-1)]+" "+ weaponList[randomNumber(weaponList.lenght-1)]+" "+
+    "Which one do you pick?");
+}*/
 
 /*
 if(b==1 && b!=" "){
