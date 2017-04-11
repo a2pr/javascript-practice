@@ -60,11 +60,16 @@ var name= prompt("A crow lands on your shoulder, and start to speaks'Whats your 
     }
 
 alert("You follow the crow advice and go to the cabin.");
-/*if (b>1) {
+if (b>1) {
     prompt("Inside the cabin you found a closet fill with:"+ weaponList[randomNumber(weaponList.lenght-1)]+" "+
     weaponList[randomNumber(weaponList.lenght-1)]+" "+ weaponList[randomNumber(weaponList.lenght-1)]+" "+
     "Which one do you pick?");
-}*/
+}else{
+    var d= prompt("You enter the inside of the dark cabin, a creature baring his fangs at you, What you do? run=1, attack=2, grab the crow and throw it to the creature=3");
+    if (d<) {
+        
+    }
+}
 
 /*
 if(b==1 && b!=" "){
