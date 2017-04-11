@@ -1,0 +1,10 @@
+Using objects.
+    modified our game to
+    create characters depending what the user uses suchs as
+        class
+            stats
+        weapon
+        skill
+    create a situation where we fight a creature
+    simulate a fight using the stats we defined before with multiple options
+    depending of the outcome of the fight, we get a win or lose scenario

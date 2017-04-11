@@ -1,16 +1,12 @@
 function randomNumber(range){
     return Math.round( Math.random() * range );
-} 
+}
 var  eventList=[
     "You woke up in a cementary, with nothing in your pockets",
     "You open your eyes and feel the freeze cold wind of the glaciar",
     "You appear in the middle of a forest, with trees as high as the eye can see"
 ];
-var classList=[
-    "Mage",
-    "Warrior",
-    "Archer"
-];
+/*
 var mageSpellList=[
     "fireball",
     "ice Age",
@@ -36,24 +32,26 @@ var archerSkillList=[
     "Precision shot",
     "Triple shot"
     
-];
-function randomWeapon(){
-        var x=weaponlist[randomNumber(weaponList.lenght -1)];
-        var y=weaponList[randomNumber(weaponList.lenght-1)];
-        var z=weaponList[randomNumber(weaponList.lenght-1)];
-        return x,y,z;
-    }
-lert(eventList[randomNumber( eventList.length - 1)]);
-var name= prompt("A crow lands on your shoulder, and start to speaks'Whats your name stranger?'");
- if(name!="") {
-     alert("hi Mr or Ms"+ " " + name + " " + " You are on top of my home. So i demand you, to look for a new home for me and my children " );
-     var b=prompt("Do you have any special skills? are you a Mage?, or Warrior?, or perphaps an Archer? (Mage=1, Warrior=2, Archer=3)");
-    }
-    if (b==1 && b!=" ") {
-        var c= prompt("Oh how lucky i'm. Can you fix my house " + " "+ classList[b -1]+"? non then what can you do?"+" which arcane magic do you posses? perphaps"
-         +"you can use destruction with fireballs? Or maybe you control the tempature with Ice age? or you could shake the ground itself"+ 
-         "with Earth manipulation? (fireball=1, Ice age=2, Eart manipulation=3) ");
-        alert("lets go to that cabin over there it could be a great place for my children");
+];*/
+alert(eventList[randomNumber( eventList.length - 1)]);
+var hero= {
+    name: window.prompt("A crow lands on your shoulder, and start to speaks'Whats your name stranger?'"),
+};
+if (!hero.name) {
+    alert("Too shy to talk aren't you? Oh welp i supose i will call you Dick.");
+    hero.name = "dick";
+    alert("Your name is Dick");
+}
+alert("hi Mr or Ms"+ " " + name + " " + " You are on top of my home. So i demand you, to look for a new home for me and my children ");
+hero.characterClass= window.prompt("Do you have any special skills? are you a Mage?, or Warrior?, or perphaps an Archer?").toLowerCase();
+
+if ( hero.characterClass=== "mage") {
+        hero.skill =  prompt("Oh how lucky i'm. Can you fix my house " + " "+ hero.characterClass +"? no then what can you do?"+" which arcane magic do you posses? perphaps"
+         +"you can cause destruction with fireballs? Or maybe you control the tempature with Ice age? or you could shake the ground itself"+ 
+         "with Earth manipulation?").toLowerCase();
+}
+alert(hero.skill);          
+        /*alert("lets go to that cabin over there it could be a great place for my children");
 
     }else if( b>1){
         alert("Great im stuck with a lowly"+" "+ classList[b-1] +" "+" go grab some weapon in that cabin over there");
@@ -69,7 +67,7 @@ if (b>1) {
     if (d<) {
         
     }
-}
+}*/
 
 /*
 if(b==1 && b!=" "){
