@@ -3,6 +3,9 @@ Using objects.
     create characters depending what the user uses suchs as
         class
             stats
+                damage
+                health
+                agility
         weapon
         skill
     create a situation where we fight a creature
