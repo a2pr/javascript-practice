@@ -25,13 +25,6 @@ function randomWeapon (range) {
     return Math.round(Math.random() * range);
 };
 /*
-var warriorSkillList=[
-    "Vertical slash",
-    "Flury",
-    "Backstab",
-    "Horizontal slash"
-];
-
 var archerSkillList=[
     "Throwing daggers",
     "Precision shot",
@@ -47,7 +40,7 @@ if (!hero.name) {
     hero.name = "dick";
     alert("Your name is Dick");
 }
-alert("hi Mr or Ms"+ " " + name + " " + " You are on top of my home. So i demand you, to look for a new home for me and my children ");
+alert("hi Mr or Ms"+ " " + hero.name + " " + " You are on top of my home. So i demand you, to look for a new home for me and my children ");
 hero.characterClass= window.prompt("Do you have any special skills? are you a Mage?, or Warrior?, or perphaps an Archer?").toLowerCase();
 
 if ( hero.characterClass=== "mage") {
@@ -76,19 +69,68 @@ if ( hero.characterClass=== "mage") {
          }
          
 }else if (hero.characterClass === "warrior" || hero.characterClass === "archer" ) {
-    alert("Great im stuck with a lowly" + " "+ hero.characterClass).toLowerCase();
+    alert("Great im stuck with a lowly" + " "+ hero.characterClass);
     if (hero.characterClass ==="warrior") {
         alert("You choose warrior class. Base stats are as follows: Damage=4, Health= 4, Agility=2");
         hero.damage=4;
         hero.health=4;
         hero.agility=1;
-        aler("Warriors can use ");//last part 
+        hero.skill= prompt("Warriors can use skills right? which one do you know ? the predictable Vertical slash? the unrefined flurry?"+
+        " the cowardy backstab or maybe a low class horizontal slash? ").toLowerCase();
+        if (hero.skill==="vertical slash") {
+            alert("You choose vertical slash, base stats updated: Damage +2, Health +0, Agility +1");
+            hero.damage= 6;
+            hero.agility= 2;
+        }
+        else if (hero.skill==="flurry") {
+            alert("You choose flurry, base stats updated: Damage +1, Health +1, Agility +3");
+            hero.damage= 5;
+            hero.health=5;
+            hero.agility= 4;
+        }
+        else if(hero.skill==="backstab"){
+            alert("You choose flurry, base stats updated: Damage +1, Health +2, Agility +2");
+            hero.damage= 5;
+            hero.health=6;
+            hero.agility= 3;
+        }
+        else if(hero.skill==="horizontal slash"){
+            alert("You choose Horizontal slash, base stats updated: Damage +3, Health -1, Agility +0");
+            hero.damage= 7;
+            hero.health=3;
+            hero.agility= 1;
+        }
+    }
+    else if (hero.characterClass ==="archer") {
+        alert("You choose warrior class. Base stats are as follows: Damage=2, Health= 3, Agility=4");
+        hero.damage=2;
+        hero.health=3;
+        hero.agility=4;
+        hero.skill=prompt("Archers can use skills right ? which one you can use?"+"Do you use cheap tricks like throwing daggers? "+
+        "maybe  you snipe foes at long distance with a precision shot?"+ "or perhaps you strike your enemies with multiple arrows with a tripple shot?").toLowerCase();
+         if (hero.skill==="throwing daggers") {
+             alert("You choose Throwing daggers, base stats updated: Damage +2, Health 0, Agility +1");
+            hero.damage= 4;
+            hero.agility= 5;
+        }
+        else if (hero.skill==="precision shot") {
+            alert("You choose Precision shot, base stats updated: Damage +3, Health -1, Agility +2");
+            hero.damage= 5;
+            hero.health=2;
+            hero.agility= 6;
+        }
+        else if (hero.skill==="triple shot") {
+             alert("You choose Precision shot, base stats updated: Damage +1, Health 0, Agility +3");
+            hero.damage= 3;
+            hero.health=0;
+            hero.agility= 7;
+        }
     }
 }
 alert("lets go to that cabin over there it could be a great place for my children");
-alert("You follow the crow request and go to the cabin.");
+alert("You follow the crow request and go to the cabin.");/*last updated 17/4 */
 
-if (hero.characterClass ==="mage") {
+/*if (hero.characterClass ==="mage") {
     alert("Inside the cabin you found a closet fill with:");
     alert("nothing.....");
     alert("you got quite the luck my mage friend-said the crow");
